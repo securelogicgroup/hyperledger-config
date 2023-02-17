@@ -27,7 +27,7 @@ Organizations:
         ID: OrdererMSP
 
         # MSPDir is the filesystem path which contains the MSP configuration
-        MSPDir: crypto-config/ordererOrganizations/network.c1/msp
+        MSPDir: crypto-config/ordererOrganizations/network.$CONSORTIUM_ID/msp
 
         # Policies defines the set of policies at this level of the config tree
         # For organization policies, their canonical path is usually
@@ -46,12 +46,12 @@ Organizations:
         # OrdererEndpoints is a list of all orderers this org runs which clients
         # and peers may to connect to to push transactions and receive blocks respectively.
         OrdererEndpoints:
-            - orderer0-network-c1:7050
+            - orderer0-network-$CONSORTIUM_ID:7050
 
     - &Org1
         Name: Org1MSP
         ID: Org1MSP
-        MSPDir: crypto-config/peerOrganizations/org1.network.c1/msp
+        MSPDir: crypto-config/peerOrganizations/org1.network.$CONSORTIUM_ID/msp
         Policies:
             Readers:
                 Type: Signature
@@ -275,10 +275,10 @@ Orderer: &OrdererDefaults
 
     EtcdRaft:
       Consenters:
-      - Host: orderer0-network-c1
+      - Host: orderer0-network-$CONSORTIUM_ID
         Port: 7050
-        ClientTLSCert: crypto-config/ordererOrganizations/network.c1/orderers/orderer0.network.c1/tls/server.crt
-        ServerTLSCert: crypto-config/ordererOrganizations/network.c1/orderers/orderer0.network.c1/tls/server.crt
+        ClientTLSCert: crypto-config/ordererOrganizations/network.$CONSORTIUM_ID/orderers/orderer0.network.$CONSORTIUM_ID/tls/server.crt
+        ServerTLSCert: crypto-config/ordererOrganizations/network.$CONSORTIUM_ID/orderers/orderer0.network.$CONSORTIUM_ID/tls/server.crt
 
       # Options to be specified for all the etcd/raft nodes. The values here
       # are the defaults for all new channels and can be modified on a
