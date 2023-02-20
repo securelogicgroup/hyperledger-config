@@ -1,0 +1,42 @@
+[
+    {
+        "name": "PrivacySchema",
+        "policy": "OR('Org1MSP.member')",
+        "requiredPeerCount": 0,
+        "maxPeerCount": 300,
+        "blockToLive": 1000000,
+        "memberOnlyRead": true
+    },
+    {
+        "name": "Identity",
+        "policy": "OR('Org1MSP.member')",
+        "requiredPeerCount": 0,
+        "maxPeerCount": 300,
+        "blockToLive": 3,
+        "memberOnlyRead": true
+    },
+    {
+        "name": "Service",
+        "policy": "OR('Org1MSP.member')",
+        "requiredPeerCount": 0,
+        "maxPeerCount": 300,
+        "blockToLive": 3,
+        "memberOnlyRead": true
+    },
+    {
+        "name": "Workflow",
+        "policy": "OR('Org1MSP.member')",
+        "requiredPeerCount": 0,
+        "maxPeerCount": 300,
+        "blockToLive": 3,
+        "memberOnlyRead": true
+    },
+    {
+        "name": "CredentialTemplate",
+        "policy": "OR('Org1MSP.member')",
+        "requiredPeerCount": 0,
+        "maxPeerCount": 300,
+        "blockToLive": 3,
+        "memberOnlyRead": true
+    }
+]
