@@ -38,5 +38,13 @@
         "maxPeerCount": 300,
         "blockToLive": 3,
         "memberOnlyRead": true
+    },
+    {
+        "name": "Demo",
+        "policy": "OR('Org1MSP.member')",
+        "requiredPeerCount": 0,
+        "maxPeerCount": 300,
+        "blockToLive": 3,
+        "memberOnlyRead": true
     }
 ]
